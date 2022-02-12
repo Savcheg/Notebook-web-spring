@@ -23,4 +23,9 @@ public class NoteController {
         notes.add(note);
         return new ResponseEntity<>("Note added" ,HttpStatus.OK);
     }
+
+    @DeleteMapping("/delete_note/{id}")
+    public ResponseEntity<String> deleteNote(@PathVariable int id){
+        return new ResponseEntity<String>("Don't work yet", HttpStatus.BAD_GATEWAY);
+    }
 }
