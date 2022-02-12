@@ -18,7 +18,7 @@ public class NoteController {
         return notes;
     }
 
-    @PostMapping("/newnote")
+    @PostMapping("/new_note")
     public ResponseEntity<String> postNote(@RequestBody Note note){
         notes.add(note);
         return new ResponseEntity<>("Note added" ,HttpStatus.OK);

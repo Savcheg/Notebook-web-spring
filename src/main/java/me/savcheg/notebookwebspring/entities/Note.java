@@ -5,6 +5,12 @@ public class Note {
     String title;
     String description;
 
+    public Note(String type, String title, String description) {
+        this.type = type;
+        this.title = title;
+        this.description = description;
+    }
+
     public String getType() {
         return type;
     }
