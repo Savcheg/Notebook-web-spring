@@ -1,4 +1,4 @@
-package me.savcheg.notebookwebspring.handlers;
+package me.savcheg.notebookwebspring.controllers;
 
 import me.savcheg.notebookwebspring.entities.Note;
 import org.springframework.http.HttpStatus;
