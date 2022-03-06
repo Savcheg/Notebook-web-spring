@@ -4,7 +4,7 @@ package me.savcheg.notebookwebspring.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.UUID;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table
@@ -15,10 +15,13 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
+    @NotBlank
     private String type;
     @Column
+    @NotBlank
     private String title;
     @Column
+    @NotBlank
     private String description;
 
     public Note(String type, String title, String description) {
