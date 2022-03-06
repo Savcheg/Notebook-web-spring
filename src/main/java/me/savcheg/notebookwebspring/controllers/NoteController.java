@@ -9,23 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/notes")
 public class NoteController {
     List<Note> notes = new ArrayList<>();
 
-    @GetMapping("/notes")
+    @GetMapping
     public List<Note> getNotes(){
         return notes;
     }
 
-    @PostMapping("/new_note")
+    @PostMapping("/new")
     public ResponseEntity<String> postNote(@RequestBody Note note){
         notes.add(note);
-        return new ResponseEntity<>("Note added" ,HttpStatus.OK);
+        return ResponseEntity.ok("Note added");
     }
 
-    @DeleteMapping("/delete_note/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteNote(@PathVariable int id){
-        return new ResponseEntity<String>("Don't work yet", HttpStatus.BAD_GATEWAY);
+        return new ResponseEntity<>("Don't work yet", HttpStatus.NOT_IMPLEMENTED);
     }
 }
