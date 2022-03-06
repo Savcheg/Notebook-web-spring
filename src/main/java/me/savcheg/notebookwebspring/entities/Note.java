@@ -31,7 +31,6 @@ public class Note {
     }
 
     public Note() {
-
     }
 
     public int getId() {
