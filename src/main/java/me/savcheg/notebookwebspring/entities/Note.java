@@ -11,7 +11,6 @@ import javax.validation.constraints.NotBlank;
 public class Note {
     @Id
     @Column
-    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column

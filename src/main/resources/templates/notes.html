@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Notes</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+	<title>Notes</title>
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
 </head>
-<body>
-    <h1>Notes</h1>
+<body class="container" th:onload="getNotes()">
+<h1>axios.get</h1>
+<ul id="notes" class="list-unstyled"></ul>
+
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>

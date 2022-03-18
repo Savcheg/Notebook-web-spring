@@ -25,6 +25,11 @@ public class NoteController {
         return notes.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Note getNoteById(@PathVariable int id) {
+        return notes.findById(id);
+    }
+
     @PostMapping("/new")
     public ResponseEntity<String> postNote(@RequestBody Note note) {
         notes.save(note);
