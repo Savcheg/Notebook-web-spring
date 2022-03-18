@@ -20,3 +20,11 @@ function getNotes() {
             document.getElementById('notes').innerHTML = '<li class="text-danger">' + err.message + '</li>';
         });
 }
+
+axios.post('/api/notes/new')
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });

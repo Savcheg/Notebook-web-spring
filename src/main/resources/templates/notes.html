@@ -7,8 +7,12 @@
 </head>
 <body class="container" th:onload="getNotes()">
 <h1>Notes</h1>
-<ul id="notes" class="list-unstyled"></ul>
 
+<a href="/notes/new">
+	<button type="submit">Add a note</button>
+</a>
+
+<ul id="notes" class="list-unstyled"></ul>
 <script type="text/javascript" th:src="@{/js/script.js}"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
