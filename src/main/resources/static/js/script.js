@@ -7,8 +7,8 @@ function getNotes() {
                     '<li class="row">' +
                     '<div class="col-md-3">' +
                     '<strong>' + note.title + '</strong>' +
-                    '<div>Description:' + note.description + '</div>' +
-                    '<div>Type:' + note.type + '</div>' +
+                    '<div>Description: ' + note.description + '</div>' +
+                    '<div>Type: ' + note.type + '</div>' +
                     '</div>' +
                     '</li><br/>'
                 );
