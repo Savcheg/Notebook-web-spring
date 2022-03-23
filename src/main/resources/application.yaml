@@ -1,0 +1,32 @@
+#H2 DATABASE FOR TESTING
+#JPA
+spring:
+  h2:
+    console:
+      enabled: 'true'
+    datasource:
+      url: jdbc:h2:file:./src/main/resources/data/notes_db
+      username: sa
+      password: password
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+  jpa:
+    open-in-view: 'false'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+
+#DEPLOY CONF
+#spring:
+#  datasource:
+#    username: ${JDBC_DATABASE_USERNAME}
+#    url: ${JDBC_DATABASE_URL}
+#    password: ${JDBC_DATABASE_PASSWORD}
+#  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#      ddl-auto: 'true'
