@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Note</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+</head>
+<body class="container">
+    <h1>New Note</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="inputTitle">Title</label>
+            <input type="text" class="form-control" id="inputTitle" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+            <label for="inputDescription">Description</label>
+            <input type="text" class="form-control" id="inputDescription" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+            <label for="inputType">Note's type</label>
+            <input type="text" class="form-control" id="inputType" placeholder="Enter type">
+        </div>
+        <button type="button" class="btn btn-primary" th:onclick="postNote()">Add a note</button>
+    </form>
+
+</body>
+</html>

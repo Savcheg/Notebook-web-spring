@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+	<style type="text/css">
+		.btn-margin {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body class="container" th:onload="getNotes()">
+<h1>Notes</h1>
+<div class="btn-margin">
+	<a href="/notes/new" class="btn btn-dark" role="button">New note</a>
+</div>
+<ul id="notes" class="list-unstyled"></ul>
+
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
