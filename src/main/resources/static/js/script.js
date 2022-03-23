@@ -1,4 +1,3 @@
-
 function getNotes() {
     axios.get('/api/notes')
         .then(function (response) {
@@ -21,10 +20,25 @@ function getNotes() {
         });
 }
 
-axios.post('/api/notes/new')
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+function postNote() {
+    const title = document.getElementById('inputTitle').value;
+    const description = document.getElementById('inputDescription').value;
+    const type = document.getElementById('inputType').value;
+    const data = new Map();
+
+    data.set("title", title);
+    data.set("description", description);
+    data.set("type", type);
+
+    const obj = Object.fromEntries(data);
+
+    axios.post('/api/notes/new', obj)
+        .then(function (response) {
+            window.location.replace("/notes");
+        })
+        .catch(function (error) {
+            console.log(JSON.stringify(obj));
+            console.log(error);
+        });
+
+}
