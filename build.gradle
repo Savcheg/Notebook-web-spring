@@ -20,6 +20,7 @@ dependencies {
     implementation group: 'org.thymeleaf', name: 'thymeleaf-spring5', version: '3.0.15.RELEASE'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '2.6.4'
 
     runtimeOnly group: 'com.h2database', name: 'h2', version: '2.1.210'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
