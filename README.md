@@ -32,3 +32,7 @@ DELETE Requests:
 
 * "" - view of all notes and button to redirect on note creation
 * "/new" - note creation form with submit and redirect button
+
+### Javascript
+
+JSON parsing via axios lib (https://github.com/axios/axios)
