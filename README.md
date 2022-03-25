@@ -1,5 +1,7 @@
 # Notebook-web-spring
 
+## Heroku deployment: https://notebook-mirea-app.herokuapp.com
+
 ## About the project
 
 ### API
