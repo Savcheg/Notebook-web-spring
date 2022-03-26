@@ -30,6 +30,8 @@ DELETE Requests:
 
 ### Views
 
+Using bootstrap (https://getbootstrap.com/)
+
 "/notes"
 
 * "" - view of all notes and button to redirect on note creation
